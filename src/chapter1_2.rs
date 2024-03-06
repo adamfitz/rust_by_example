@@ -41,12 +41,13 @@ fn main() {
     // Only types that implement fmt::Display can be formatted with `{}`. User-
     // defined types do not implement fmt::Display by default.
 
+    #[derive(Debug)]
     #[allow(dead_code)] // disable `dead_code` which warn against unused module
     struct Structure(i32);
 
     // This will not compile because `Structure` does not implement
     // fmt::Display.
-    // println!("This struct `{}` won't print...", Structure(3));
+    println!("This struct `{:#?}` won't print...", Structure(3));
     // TODO ^ Try uncommenting this line
 
     // For Rust 1.58 and above, you can directly capture the argument from a
@@ -55,4 +56,9 @@ fn main() {
     let number: f64 = 1.0;
     let width: usize = 5;
     println!("{number:>width$}");
+
+    // print pi with a specific set of decimal places
+    let pi: f64 = 3.141592;
+    // the formatter says - argument 1 (pi) is printed with the precision of argument 0 (3)
+    println!("{1:.0$}", 3, pi)
 }
