@@ -15,3 +15,15 @@ path = "src/chapter1_1.rs"
 [[bin]]
 name = "chapter1_2"
 path = "src/chapter1_2.rs"
+
+[[bin]]
+name = "chapter1_2_1a"
+path = "src/chapter1_2_1a.rs"
+
+[[bin]]
+name = "chapter1_2_1b"
+path = "src/chapter1_2_1b.rs"
+
+[[bin]]
+name = "chapter1_2_2a"
+path = "src/chapter1_2_2a.rs"
